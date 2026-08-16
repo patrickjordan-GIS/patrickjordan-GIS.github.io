@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluating GPS Accuracy in Mt. Tabor | Patrick Jordan</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #24313a;
+            background: #f5f7f8;
+        }
+
+        nav {
+            background: #172b36;
+            padding: 18px 20px;
+        }
+
+        nav div {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: white;
+            padding: 70px 20px;
+            border-bottom: 1px solid #dce3e6;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .back {
+            color: #3d7772;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: #172b36;
+            margin-bottom: 18px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #53616a;
+            max-width: 750px;
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            color: #3d7772;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            color: #172b36;
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+        }
+
+        p {
+            max-width: 800px;
+            color: #53616a;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-box {
+            background: white;
+            border: 1px solid #dce3e6;
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        .info-box strong {
+            display: block;
+            color: #244f55;
+            margin-bottom: 5px;
+        }
+
+        .storymap {
+            background: #172b36;
+            color: white;
+            padding: 35px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .storymap h3 {
+            margin-bottom: 10px;
+        }
+
+        .storymap p {
+            color: #dce6e8;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #5f918b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background: #4d7974;
+        }
+
+        ul {
+            max-width: 800px;
+            padding-left: 25px;
+            color: #53616a;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #172b36;
+            color: #b9c5c9;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div>
+        <a href="index.html">← Back to Portfolio</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+
+        <a class="back" href="index.html">GIS Portfolio</a>
+
+        <h1>Evaluating GPS Accuracy in Mt. Tabor</h1>
+
+        <p class="subtitle">
+            Assessing smartphone GPS positional accuracy across varying
+            environmental conditions at Mt. Tabor Park in Portland, Oregon.
+        </p>
+
+        <div class="tags">
+            GPS/GNSS · Field Data Collection · ArcGIS Pro · ArcGIS Online · Field Maps
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <h2>Project Overview</h2>
+
+        <p>
+            This project evaluated smartphone GPS accuracy under varying
+            environmental conditions at Mt. Tabor Park in Portland, Oregon.
+            The study examined how surrounding landscape characteristics,
+            including vegetation and sky visibility, influenced positional
+            accuracy.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <strong>Location</strong>
+                Mt. Tabor Park, Portland, Oregon
+            </div>
+
+            <div class="info-box">
+                <strong>Tools</strong>
+                ArcGIS Pro, ArcGIS Online, Field Maps
+            </div>
+
+            <div class="info-box">
+                <strong>Project Type</strong>
+                GPS/GNSS Field Study
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Research Question</h2>
+
+        <p>
+            How does the surrounding environmental context influence
+            smartphone GPS positional accuracy?
+        </p>
+    </section>
+
+    <section>
+        <h2>Data Collection</h2>
+
+        <p>
+            Field data were collected at Mt. Tabor across areas with
+            different environmental conditions. Observations included
+            positional accuracy and environmental characteristics such as
+            canopy coverage and sky visibility.
+        </p>
+
+        <br>
+
+        <p>
+            The project used ArcGIS Field Maps and ArcGIS Online to collect
+            and organize spatial observations, which were then analyzed
+            using ArcGIS Pro.
+        </p>
+    </section>
+
+    <section>
+        <h2>Analysis</h2>
+
+        <p>
+            The collected observations were compared across environmental
+            conditions to examine patterns in positional uncertainty.
+            Open environments with greater sky visibility were compared
+            with areas characterized by mixed and dense vegetation.
+        </p>
+    </section>
+
+    <section>
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>
+                Open environments with unobstructed views of the sky
+                generally produced the most accurate positional results.
+            </li>
+
+            <li>
+                Dense tree canopy corresponded with greater positional
+                uncertainty.
+            </li>
+
+            <li>
+                An external Bad Elf GPS receiver produced better average
+                positional accuracy, although technical difficulties
+                limited the number of comparison observations collected.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Interactive Project</h2>
+
+        <div class="storymap">
+
+            <h3>Explore the full StoryMap</h3>
+
+            <p>
+                The complete project includes the study design, field
+                observations, maps, analysis, and project conclusions.
+            </p>
+
+            <a class="button"
+               href="https://storymaps.arcgis.com/stories/f01958c09a31477d8f5aca62a093f9de"
+               target="_blank">
+                View Interactive StoryMap →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Patrick Jordan · GIS Portfolio</p>
+</footer>
+
+</body>
+</html>
