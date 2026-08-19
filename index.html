@@ -3,51 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Patrick Jordan | GIS Portfolio</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #24313a;
             background: #f5f7f8;
         }
 
-        header {
-            background: #172b36;
-            color: white;
-            padding: 80px 20px;
-        }
-
-        .header-content {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        header h1 {
-            font-size: 3.2rem;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        header h2 {
-            font-size: 1.35rem;
-            font-weight: 400;
-            color: #b9d4d0;
-            margin-bottom: 25px;
-        }
-
-        header p {
-            max-width: 700px;
-            font-size: 1.1rem;
-            color: #e3e9eb;
-        }
+        /* ---------------- NAVIGATION ---------------- */
 
         nav {
             background: white;
@@ -62,6 +40,18 @@
             max-width: 1100px;
             margin: auto;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            color: #172b36;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
             gap: 30px;
         }
 
@@ -75,10 +65,87 @@
             color: #3d7772;
         }
 
+        /* ---------------- HERO ---------------- */
+
+        header {
+            background: #172b36;
+            color: white;
+            padding: 90px 20px;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            color: #8fb7b2;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        header h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: #b9d4d0;
+            margin-bottom: 25px;
+        }
+
+        header p {
+            max-width: 760px;
+            font-size: 1.1rem;
+            color: #e3e9eb;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .button-primary {
+            background: #5f918b;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #4d7974;
+        }
+
+        .button-secondary {
+            border: 1px solid #91aaa9;
+            color: white;
+        }
+
+        .button-secondary:hover {
+            background: #29424d;
+        }
+
+        /* ---------------- SECTIONS ---------------- */
+
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 75px 20px;
         }
 
         section h2 {
@@ -88,22 +155,24 @@
         }
 
         .intro {
-            max-width: 750px;
+            max-width: 760px;
             margin-bottom: 40px;
             color: #53616a;
         }
 
+        /* ---------------- PROJECTS ---------------- */
+
         .projects {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            gap: 28px;
         }
 
         .project-card {
             background: white;
             border: 1px solid #dce3e6;
             border-radius: 10px;
-            padding: 30px;
+            overflow: hidden;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-decoration: none;
             color: inherit;
@@ -112,37 +181,87 @@
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            background: #e9eef0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 26px 28px 28px;
         }
 
         .project-card h3 {
             color: #244f55;
             font-size: 1.3rem;
-            margin-bottom: 12px;
+            line-height: 1.35;
+            margin-bottom: 10px;
         }
 
         .project-card p {
             color: #59666e;
-            margin-bottom: 18px;
+            margin-bottom: 17px;
         }
 
         .tags {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: #3d7772;
-            font-weight: 600;
+            font-weight: 700;
         }
+
+        .view-project {
+            display: inline-block;
+            margin-top: 15px;
+            color: #3d7772;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* ---------------- SKILLS ---------------- */
 
         .skills {
             background: white;
             border-top: 1px solid #dce3e6;
             border-bottom: 1px solid #dce3e6;
+            max-width: none;
+        }
+
+        .skills-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .skills-intro {
+            max-width: 760px;
+            color: #53616a;
+            margin-bottom: 30px;
+        }
+
+        .skills-group {
+            margin-bottom: 28px;
+        }
+
+        .skills-group h3 {
+            font-size: 1rem;
+            color: #244f55;
+            margin-bottom: 12px;
         }
 
         .skills-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 25px;
         }
 
         .skill {
@@ -154,163 +273,419 @@
             font-weight: 600;
         }
 
-        .about-text {
+        /* ---------------- ABOUT ---------------- */
+
+        .about-content {
             max-width: 800px;
-            color: #53616a;
         }
+
+        .about-content p {
+            color: #53616a;
+            margin-bottom: 18px;
+        }
+
+        /* ---------------- FOOTER ---------------- */
 
         footer {
             background: #172b36;
             color: #b9c5c9;
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
             font-size: 0.9rem;
         }
 
+        footer a {
+            color: #b9d4d0;
+            text-decoration: none;
+        }
+
+        /* ---------------- MOBILE ---------------- */
+
         @media (max-width: 700px) {
+
+            header {
+                padding: 70px 20px;
+            }
+
             header h1 {
-                font-size: 2.4rem;
+                font-size: 2.5rem;
             }
 
             .projects {
                 grid-template-columns: 1fr;
             }
 
-            nav div {
-                gap: 18px;
+            .nav-links {
+                gap: 15px;
             }
+
+            .project-image {
+                height: 210px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="header-content">
-        <h1>Patrick Jordan</h1>
-        <h2>GIS Technician | GIS Analyst</h2>
-        <p>
-            GIS student transitioning into the geospatial field, with hands-on
-            experience in spatial analysis, cartography, web mapping, and GPS
-            field data collection.
-        </p>
-    </div>
-</header>
+<!-- ==================== NAVIGATION ==================== -->
 
 <nav>
+
     <div>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+
+        <a href="#" class="nav-name">
+            Patrick Jordan
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+
+        </div>
+
     </div>
+
 </nav>
 
+
+<!-- ==================== HERO ==================== -->
+
+<header>
+
+    <div class="header-content">
+
+        <div class="eyebrow">
+            GIS Portfolio
+        </div>
+
+        <h1>
+            Patrick Jordan
+        </h1>
+
+        <h2>
+            Entry-Level GIS Professional
+        </h2>
+
+        <p>
+            GIS student and emerging geospatial professional with hands-on
+            experience in spatial analysis, cartography, web mapping, GPS/GNSS
+            field data collection, and ArcGIS workflows.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="button button-primary">
+                View Projects
+            </a>
+
+            <!-- WE WILL ADD YOUR RESUME LINK HERE -->
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==================== PROJECTS ==================== -->
+
 <section id="projects">
-    <h2>Featured Projects</h2>
+
+    <h2>
+        Featured Projects
+    </h2>
 
     <p class="intro">
-        A selection of GIS projects demonstrating experience with spatial
-        analysis, cartography, field data collection, and geographic
-        visualization.
+        Selected projects demonstrating experience with spatial analysis,
+        cartographic design, field data collection, geographic visualization,
+        and location-based analysis.
     </p>
+
 
     <div class="projects">
 
+
+        <!-- MT TABOR -->
+
         <a href="mt-tabor.html" class="project-card">
 
-    <h3>Evaluating GPS Accuracy in Mt. Tabor</h3>
+            <div class="project-image">
 
-    <p>
-        A field-based assessment examining smartphone GPS accuracy
-        across varying environmental conditions at Mt. Tabor Park
-        in Portland, Oregon.
-    </p>
+                <img
+                    src="mt-tabor-study-area.png"
+                    alt="Mt. Tabor GPS accuracy study area map">
 
-    <div class="tags">
-        GPS/GNSS · Field Data · ArcGIS Pro · ArcGIS Online
-    </div>
-
-</a>
-
-        <a href="vermont-maple.html" class="project-card">
-            <h3>From Tree to Cone: Mapping Vermont's Maple Landscape</h3>
-            <p>
-                An interactive mapping project exploring Vermont's maple
-                landscape through thematic cartography and geographic
-                visualization.
-            </p>
-            <div class="tags">
-                Cartography · Web Mapping · Data Visualization
             </div>
+
+            <div class="project-content">
+
+                <h3>
+                    Evaluating GPS Accuracy in Mt. Tabor
+                </h3>
+
+                <p>
+                    A field-based assessment examining smartphone GPS accuracy
+                    across varying environmental conditions at Mt. Tabor Park
+                    in Portland, Oregon.
+                </p>
+
+                <div class="tags">
+                    GPS/GNSS · Field Data · ArcGIS Pro · ArcGIS Online
+                </div>
+
+                <span class="view-project">
+                    View project →
+                </span>
+
+            </div>
+
         </a>
+
+
+        <!-- CASCADIA -->
 
         <a href="cascadia.html" class="project-card">
-            <h3>Cascadia Subduction Zone Earthquake</h3>
-            <p>
-                A spatial analysis of neighborhood-level earthquake exposure
-                in Portland using hazard, population, and environmental
-                datasets.
-            </p>
-            <div class="tags">
-                Spatial Analysis · Raster Analysis · ModelBuilder
+
+            <div class="project-image">
+
+                <img
+                    src="cascadia-final-map.png"
+                    alt="Cascadia Subduction Zone final analysis map">
+
             </div>
+
+            <div class="project-content">
+
+                <h3>
+                    Cascadia Subduction Zone Earthquake Analysis
+                </h3>
+
+                <p>
+                    A spatial analysis examining earthquake exposure and
+                    potential risk across the Portland metropolitan area.
+                </p>
+
+                <div class="tags">
+                    Spatial Analysis · Raster Analysis · ModelBuilder
+                </div>
+
+                <span class="view-project">
+                    View project →
+                </span>
+
+            </div>
+
         </a>
+
+
+        <!-- VERMONT -->
+
+        <a href="vermont-maple.html" class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="vermont-final-map.png"
+                    alt="Final map of Vermont's maple landscape">
+
+            </div>
+
+            <div class="project-content">
+
+                <h3>
+                    From Tree to Cone: Mapping Vermont's Maple Landscape
+                </h3>
+
+                <p>
+                    An interactive cartographic project exploring Vermont's
+                    maple landscape through thematic mapping and geographic
+                    visualization.
+                </p>
+
+                <div class="tags">
+                    Cartography · Web Mapping · Data Visualization
+                </div>
+
+                <span class="view-project">
+                    View project →
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- SALT & STRAW -->
 
         <a href="salt-straw.html" class="project-card">
-             <h3>Beyond the Scoop: Salt & Straw</h3>
-        
-            <p>
-                A location suitability analysis evaluating potential new
-                Salt & Straw locations in the Portland–Vancouver metropolitan
-                area.
-            </p>
-            <div class="tags">
-                Suitability Analysis · Demographics · Geocoding
+
+            <div class="project-image">
+
+                <img
+                    src="salt-straw-final-map.png"
+                    alt="Salt & Straw location suitability analysis map">
+
             </div>
+
+            <div class="project-content">
+
+                <h3>
+                    Beyond the Scoop: A Location Suitability Analysis
+                </h3>
+
+                <p>
+                    A GIS-based analysis evaluating potential locations for
+                    a new Salt & Straw store in the Portland–Vancouver
+                    metropolitan area.
+                </p>
+
+                <div class="tags">
+                    Suitability Analysis · Demographics · Geocoding
+                </div>
+
+                <span class="view-project">
+                    View project →
+                </span>
+
+            </div>
+
         </a>
 
+
     </div>
+
 </section>
+
+
+<!-- ==================== SKILLS ==================== -->
 
 <section class="skills" id="skills">
-    <div>
-        <h2>Technical Skills</h2>
 
-        <div class="skills-list">
-            <span class="skill">ArcGIS Pro</span>
-            <span class="skill">ArcGIS Online</span>
-            <span class="skill">ArcGIS StoryMaps</span>
-            <span class="skill">Field Maps</span>
-            <span class="skill">GPS/GNSS</span>
-            <span class="skill">Spatial Analysis</span>
-            <span class="skill">Cartography</span>
-            <span class="skill">Raster Analysis</span>
-            <span class="skill">ModelBuilder</span>
-            <span class="skill">Web Mapping</span>
-            <span class="skill">SQL</span>
-            <span class="skill">Tableau</span>
+    <div class="skills-inner">
+
+        <h2>
+            Technical Skills
+        </h2>
+
+        <p class="skills-intro">
+            Tools and methods developed through GIS coursework and
+            project-based experience.
+        </p>
+
+
+        <div class="skills-group">
+
+            <h3>
+                Software & Platforms
+            </h3>
+
+            <div class="skills-list">
+
+                <span class="skill">ArcGIS Pro</span>
+                <span class="skill">ArcGIS Online</span>
+                <span class="skill">ArcGIS StoryMaps</span>
+                <span class="skill">Field Maps</span>
+                <span class="skill">ModelBuilder</span>
+
+            </div>
+
         </div>
+
+
+        <div class="skills-group">
+
+            <h3>
+                GIS Methods
+            </h3>
+
+            <div class="skills-list">
+
+                <span class="skill">Spatial Analysis</span>
+                <span class="skill">Raster Analysis</span>
+                <span class="skill">Cartography</span>
+                <span class="skill">GPS/GNSS</span>
+                <span class="skill">Field Data Collection</span>
+                <span class="skill">Web Mapping</span>
+                <span class="skill">Location Suitability Analysis</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-group">
+
+            <h3>
+                Additional Tools
+            </h3>
+
+            <div class="skills-list">
+
+                <span class="skill">SQL</span>
+                <span class="skill">Tableau</span>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
+
+
+<!-- ==================== ABOUT ==================== -->
 
 <section id="about">
-    <h2>About Me</h2>
 
-    <p class="about-text">
-        I am a GIS student completing a Geospatial Information Systems
-        certificate at Portland Community College. My background in
-        professional culinary operations has given me extensive experience
-        in problem-solving, organization, quality control, and working
-        effectively under demanding conditions. I am now applying those
-        skills to geographic information systems, with a growing focus on
-        spatial analysis, cartography, environmental applications, and
-        field data collection.
-    </p>
+    <h2>
+        About Me
+    </h2>
+
+    <div class="about-content">
+
+        <p>
+            I am completing a Geospatial Information Systems certificate
+            at Portland Community College and building a career in GIS
+            and the geospatial field.
+        </p>
+
+        <p>
+            My GIS coursework and projects have given me hands-on experience
+            with spatial analysis, cartographic design, field data collection,
+            GPS/GNSS, web mapping, and ArcGIS workflows. I enjoy using
+            geographic data to investigate real-world questions and
+            communicate spatial patterns clearly through maps and
+            visualizations.
+        </p>
+
+        <p>
+            Before transitioning into GIS, I worked in professional culinary
+            operations. That experience developed strong skills in
+            organization, problem-solving, quality control, communication,
+            and working effectively in demanding environments — skills I
+            now bring to my work in GIS.
+        </p>
+
+    </div>
+
 </section>
 
+
+<!-- ==================== FOOTER ==================== -->
+
 <footer>
-    <p>Patrick Jordan · GIS Portfolio</p>
+
+    <p>
+        Patrick Jordan · GIS Portfolio
+    </p>
+
 </footer>
+
 
 </body>
 </html>
