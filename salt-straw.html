@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salt & Straw Location Suitability Analysis | Patrick Jordan</title>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #24313a;
+    background: #f5f7f8;
+}
+
+nav {
+    background: #172b36;
+    padding: 18px 20px;
+}
+
+nav div, .hero-content, main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero {
+    background: white;
+    padding: 70px 20px;
+    border-bottom: 1px solid #dce3e6;
+}
+
+.back {
+    color: #3d7772;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: #172b36;
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #53616a;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.tags {
+    color: #3d7772;
+    font-weight: 600;
+}
+
+main {
+    padding: 60px 20px;
+}
+
+section { margin-bottom: 55px; }
+
+h2 {
+    color: #172b36;
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+}
+
+p {
+    max-width: 800px;
+    color: #53616a;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.info-box {
+    background: white;
+    border: 1px solid #dce3e6;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.info-box strong {
+    display: block;
+    color: #244f55;
+    margin-bottom: 5px;
+}
+
+.project-image {
+    width: 100%;
+    margin: 35px 0;
+    background: white;
+    border: 1px solid #dce3e6;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    padding: 12px 18px 15px;
+    margin: 0;
+    max-width: none;
+    font-size: .85rem;
+    color: #68757c;
+    background: #f8fafb;
+    border-top: 1px solid #dce3e6;
+}
+
+.workflow {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.workflow-step {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border: 1px solid #dce3e6;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.workflow-step span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5f918b;
+    min-width: 35px;
+}
+
+.workflow-step h3 {
+    color: #244f55;
+    margin-bottom: 4px;
+}
+
+.workflow-step p { margin: 0; }
+
+footer {
+    background: #172b36;
+    color: #b9c5c9;
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 700px) {
+    h1 { font-size: 2.2rem; }
+    .info-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><a href="index.html">← Back to Portfolio</a></div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+
+<a class="back" href="index.html">GIS Portfolio</a>
+
+<h1>Beyond the Scoop: A Location Suitability Analysis for Salt & Straw</h1>
+
+<p class="subtitle">
+A GIS-based location suitability analysis evaluating potential locations
+for a new Salt & Straw store in the Portland–Vancouver metropolitan area.
+</p>
+
+<div class="tags">
+Location Analysis · Demographics · Spatial Queries · Geocoding · ArcGIS Pro
+</div>
+
+</div>
+</header>
+
+<main>
+
+<section>
+
+<h2>Project Overview</h2>
+
+<p>
+This project used GIS to evaluate potential locations for a new
+Salt & Straw store based on demographic and geographic criteria.
+The analysis combined population and median household income data
+with existing Salt & Straw locations to identify areas that could
+represent promising opportunities for expansion.
+</p>
+
+<div class="info-grid">
+
+<div class="info-box">
+<strong>Study Area</strong>
+Portland–Vancouver metropolitan area
+</div>
+
+<div class="info-box">
+<strong>Tools</strong>
+ArcGIS Pro
+</div>
+
+<div class="info-box">
+<strong>Project Type</strong>
+Location Suitability Analysis
+</div>
+
+</div>
+
+<!-- ADD YOUR BEST SALT & STRAW MAP HERE -->
+
+</section>
+
+<section>
+
+<h2>Research Question</h2>
+
+<p>
+Where within the Portland–Vancouver metropolitan area might a new
+Salt & Straw location be most suitable based on population,
+income, and proximity to existing locations?
+</p>
+
+</section>
+
+<section>
+
+<h2>Analytical Workflow</h2>
+
+<div class="workflow">
+
+<div class="workflow-step">
+<span>01</span>
+<div>
+<h3>Demographic Analysis</h3>
+<p>
+Analyzed population and median household income to identify areas
+matching the project's suitability criteria.
+</p>
+</div>
+</div>
+
+<div class="workflow-step">
+<span>02</span>
+<div>
+<h3>Spatial Processing</h3>
+<p>
+Merged, clipped, joined, and queried geographic datasets to prepare
+the analysis layers.
+</p>
+</div>
+</div>
+
+<div class="workflow-step">
+<span>03</span>
+<div>
+<h3>Existing Locations</h3>
+<p>
+Geocoded existing Salt & Straw locations and evaluated their
+relationship to potential target areas.
+</p>
+</div>
+</div>
+
+<div class="workflow-step">
+<span>04</span>
+<div>
+<h3>Suitability Analysis</h3>
+<p>
+Used spatial queries, buffers, and other geoprocessing techniques
+to narrow potential locations.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Results</h2>
+
+<p>
+The final analysis identified Irvington and Bethany as potential
+areas meeting the established population and income criteria.
+The results demonstrate how demographic and geographic data can
+be combined to support location-based business decisions.
+</p>
+
+<!-- ADD FINAL RESULTS MAP HERE -->
+
+</section>
+
+<section>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>
+GIS can translate demographic and geographic data into actionable
+information for business location decisions.
+</li>
+
+<li>
+Combining multiple suitability criteria provides a more useful
+assessment than evaluating population or income independently.
+</li>
+
+<li>
+The project provided hands-on experience with spatial queries,
+attribute joins, geocoding, buffering, and other ArcGIS Pro
+geoprocessing tools.
+</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Project Report</h2>
+
+<p>
+The complete report documents the datasets, analytical workflow,
+maps, suitability criteria, and final recommendations.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+<p>Patrick Jordan · GIS Portfolio</p>
+</footer>
+
+</body>
+</html>
